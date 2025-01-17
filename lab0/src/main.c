@@ -1,15 +1,14 @@
-#include <stdio.h>
+#include "stm32f0xx.h"
 
-int main(void) {
-    int x = 0;  
-    int y = 0;  
-
-    while (1) { 
+int main() {
+    int x = 0;
+    int y = 0;
+    for(;;) {
         x++;
-        if (x >= 10) { 
-            x = 0; 
-            y++;   
+        if (x == 10) {
+            y++;
+            x = 0;
         }
     }
-    return 0; 
+    return 0;
 }
